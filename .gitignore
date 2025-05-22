@@ -1,10 +1,11 @@
+./*
+
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -24,7 +25,9 @@ wheels/
 # Virtual Environment
 venv/
 ENV/
-nhl/
+env/
+.env/
+.venv/
 
 # IDE
 .idea/
@@ -32,33 +35,24 @@ nhl/
 *.swp
 *.swo
 
+# Testing
+.coverage
+.coverage.*
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
 # Project specific
-output.json
+*.json
+*.csv
+output/
+processed_data/
 
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Environment variables
-.env
-
-# OS
+# Misc
 .DS_Store
 Thumbs.db 

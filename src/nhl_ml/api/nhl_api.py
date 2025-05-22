@@ -108,7 +108,7 @@ class NHLStats:
         # Save to file
         logger.info(f"\nSaving stats to {output_file}")
         with open(output_file, 'w') as f:
-            json.dump(all_stats, f, indent=2)
+            f.write(json.dumps(all_stats, indent=2))
         logger.info("Stats saved successfully")
 
 
