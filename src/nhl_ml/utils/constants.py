@@ -1,39 +1,37 @@
 """
-NHL constants and common values.
+NHL API constants and configuration values.
 """
 
 # Team IDs
 TEAM_IDS = {
-    'ANA': 24,    # Anaheim Ducks
-    'ARI': 53,    # Arizona Coyotes
-    'BOS': 6,     # Boston Bruins
-    'BUF': 7,     # Buffalo Sabres
-    'CGY': 20,    # Calgary Flames
-    'CAR': 12,    # Carolina Hurricanes
-    'CHI': 16,    # Chicago Blackhawks
-    'COL': 21,    # Colorado Avalanche
-    'CBJ': 29,    # Columbus Blue Jackets
-    'DAL': 25,    # Dallas Stars
-    'DET': 17,    # Detroit Red Wings
-    'EDM': 22,    # Edmonton Oilers
-    'FLA': 13,    # Florida Panthers
-    'LAK': 26,    # Los Angeles Kings
-    'MIN': 30,    # Minnesota Wild
-    'MTL': 8,     # Montreal Canadiens
-    'NSH': 18,    # Nashville Predators
-    'NJD': 1,     # New Jersey Devils
-    'NYI': 2,     # New York Islanders
-    'NYR': 3,     # New York Rangers
-    'OTT': 9,     # Ottawa Senators
-    'PHI': 4,     # Philadelphia Flyers
-    'PIT': 5,     # Pittsburgh Penguins
-    'SJS': 28,    # San Jose Sharks
-    'SEA': 55,    # Seattle Kraken
-    'STL': 19,    # St. Louis Blues
-    'TBL': 14,    # Tampa Bay Lightning
-    'TOR': 10,    # Toronto Maple Leafs
-    'VAN': 23,    # Vancouver Canucks
-    'VGK': 54,    # Vegas Golden Knights
-    'WSH': 15,    # Washington Capitals
-    'WPG': 52,    # Winnipeg Jets
-} 
+    "TOR": 10,  # Toronto Maple Leafs
+    "FLA": 13,  # Florida Panthers
+    "BOS": 6,   # Boston Bruins
+    "TBL": 14,  # Tampa Bay Lightning
+    "MTL": 8,   # Montreal Canadiens
+    "OTT": 9,   # Ottawa Senators
+    "BUF": 7,   # Buffalo Sabres
+    "DET": 17,  # Detroit Red Wings
+}
+
+# API Endpoints
+API_BASE = "https://api-web.nhle.com/v1"
+ROSTER_ENDPOINT = "/roster/{team}/current"
+PLAYER_ENDPOINT = "/player/{id}/landing"
+TEAM_STATS_ENDPOINT = "/club-stats/team/{id}/now"
+
+# Data Processing
+DEFAULT_SEASON = "20232024"
+MIN_GAMES_PLAYED = 10
+STATS_FEATURES = [
+    'games_played',
+    'goals',
+    'assists',
+    'points',
+    'plus_minus',
+    'pim',
+    'shots',
+    'shooting_pct',
+    'powerplay_goals',
+    'powerplay_points'
+]
